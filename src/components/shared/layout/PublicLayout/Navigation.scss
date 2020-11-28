@@ -1,0 +1,29 @@
+.navigation {
+  padding: 10px;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 0.2rem 0;
+    padding-left: 25px;
+    padding-right: 10px;
+
+    li {
+      margin-top: 1.5rem;
+      font-size: 1.25rem;
+      cursor: pointer;
+
+      .link {
+        opacity: 0.6;
+        color: #fff;
+        margin-top: 1rem;
+      }
+
+      .link:hover {
+        opacity: 1;
+        transition: opacity 0.5s;
+      }
+    }
+  }
+}

@@ -1,0 +1,83 @@
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 10;
+  animation: fadeIn .3s;
+  overflow-y: auto;
+
+  button {
+    cursor: pointer;
+    opacity: .5;
+    transition: opacity .3s;
+    border: 0;
+    padding: 0;
+  }
+
+  button:hover {
+    opacity: 1;
+  }
+
+  button:focus {
+    outline: none;
+  }
+
+  .lightbox__previous,
+  .lightbox__next {
+    background: url('icons/chevron.svg') center center / 20px no-repeat;
+    width: 50px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    z-index: 11;
+  }
+
+  .lightbox__previous {
+    left: 0;
+    right: auto;
+    transform: rotate(180deg);
+  }
+
+  .lightbox__close {
+    background: url('icons/cross.svg') center center / 25px 25px no-repeat;
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 12;
+  }
+
+  .lightbox__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    min-height: 100%;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      height: auto;
+      animation: fadeIn .1s;
+      padding: 20px;
+    }
+
+    @media screen and (min-width: 1100px) {
+      img {
+        position: absolute;
+      }
+    }
+  }
+}
+
+// Animations
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
