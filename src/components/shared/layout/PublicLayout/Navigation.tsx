@@ -25,7 +25,7 @@ export const Navigation: FC<Props> = (props) => {
       <ul>
         <li>
           <span className="link" onClick={onGalleryClick}>
-            Gallery
+            Photos
           </span>
           <ul>
             {categories.map((category) => (

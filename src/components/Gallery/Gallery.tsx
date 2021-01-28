@@ -79,8 +79,8 @@ export const Gallery: FC<Props> = (props) => {
   // Page title
   const pageTitle =
     galleryType === GalleryType.Albums
-      ? `${categoryStore.currentCategory?.name} Albums`
-      : 'Gallery';
+      ? `${categoryStore.currentCategory?.name} / Albums`
+      : 'Photos';
 
   return (
     <Observer>
